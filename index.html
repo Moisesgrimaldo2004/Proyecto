@@ -1,0 +1,1183 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+        <!-- Iconos -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+        <style>
+
+            .ref {
+                color: white;
+            }
+
+            .ref2 {
+                color: black;
+            }
+
+            .bold-sm {
+            font-weight: bold;
+            font-size: 0.8rem;
+            }
+
+            .link {
+            margin-right: 15px;
+            transition: color 0.3s, text-decoration 0.3s;
+            }
+
+            .link:hover {
+                color: blue;
+                text-decoration: underline;
+                cursor: pointer;
+            }
+
+          /* CSS KIKE */
+          .collapse .dropdown-menu {
+        width: auto;
+        min-width: 700px;
+        height: auto;
+      }
+  
+      .collapse .dropdown-menu .dropdown-column {
+        width: 250px;
+        display: inline-block;
+        vertical-align: top;
+      }
+      
+  
+      .collapse .dropdown-menu .dropdown-header {
+        font-size: 23px;
+
+      }
+
+      .collapse .dropdown-menu .dropdown-item {
+        font-size: 20px;
+      }
+
+      .collapse .dropdown-menu .dropdown-item:hover,
+      .collapse .dropdown-menu small:hover {
+        color: red;
+        background-color: transparent;
+      }
+
+      .collapse .dropdown-menu small {
+      font-size: 14px; 
+      color: #bbb; 
+    }
+  
+      .collapse .dropdown-menu a {
+        color: white;
+      }
+
+      @media(max-width: 768px){
+        .collapse .dropdown-menu{
+          min-width: 100%;
+        }
+        
+        .collapse .dropdown-menu .row {
+          display: flex;
+          flex-direction: column;
+        }
+        
+        .collapse .dropdown-menu .col-md-4 {
+          width: 100%;
+          margin-bottom: 20px;
+        }
+        
+        .collapse .dropdown-menu {
+          width: auto;
+        }
+      }
+  
+  
+  @media(max-width: 576px) {
+    .collapse .dropdown-menu {
+      min-width: 100%;
+    }
+
+    .collapse .dropdown-menu .row {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .collapse .dropdown-menu .col-md-4,
+    .collapse .dropdown-menu .col-md-6 {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+  
+  .top-bar {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+  width: 100%;
+}
+
+.top-bar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 130px;
+  max-width: 100%;
+  flex-wrap: wrap;
+}
+
+.top-bar-left, .top-bar-right {
+  display: flex;
+  align-items: center;
+  flex-basis: 40%;
+  flex-shrink: 1;
+}
+
+.top-bar-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 50%;
+  flex-shrink: 1;
+}
+
+.top-bar-left img, .top-bar-center img, .top-bar-right img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.top-bar-left a, .top-bar-right a {
+  font-size: 1rem;
+  margin-left: 8px;
+}
+
+/* Alinear los elementos en la barra superior */
+.top-bar-left {
+  display: flex;
+  align-items: center;
+  margin-left: 0;
+  flex-wrap: wrap;
+}
+
+.top-bar-left a {
+  color: #000;
+  text-decoration: none;
+  font-size: 12px;
+  margin-right: 15px;
+  padding: 0px 10px;
+  display: flex;
+  align-items: center;
+}
+
+.top-bar-left a img {
+  margin-right: 5px;
+}
+
+.top-bar .top-bar-left-cuidate img {
+  border-radius: 20px;
+}
+
+.top-bar-center {
+  position: absolute;
+  left: 49%;
+  transform: translateX(-49%);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.top-bar-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  margin-right: 0;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 1200px) {
+  .top-bar-left a, .top-bar-right a {
+    font-size: 1rem;
+    padding: 0 8px;
+  }
+
+  .top-bar-center img {
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .top-bar-left a, .top-bar-right a {
+    display: none;
+  }
+
+  .top-bar-center {
+    position: relative;
+    left: 10px;
+    transform: none;
+    margin-bottom: 10px;
+  }
+
+  .top-bar-center img {
+    max-width: 60%; 
+  }
+}
+
+@media (max-width: 768px) {
+  .top-bar .container {
+    padding: 0 15px;
+  }
+
+  .top-news-bar-kike {
+    padding: 5px;
+    font-size: 13px;
+  }
+
+  .top-news-bar-kike .highlight-news {
+    margin-right: 5px;
+    font-size: 14px; 
+  }
+
+  .top-news-bar-kike .news-list {
+    gap: 8px;
+  }
+
+  .top-bar-left a, .top-bar-right a{
+    display: none;
+  }
+
+  .top-bar-left {
+    position: relative;
+    left: 0;
+    transform: none;
+    margin-bottom: 10px;
+  }
+  
+  .top-bar-center img {
+    max-width: 70%; 
+  }
+}
+
+@media (max-width: 576px) {
+  .top-bar {
+    flex-direction: column; 
+  }
+
+  .top-bar .container {
+    padding: 0 10px;
+  }
+
+  .top-bar-center {
+    position: relative;
+    left: 0;
+    transform: none;
+    margin-bottom: 10px;
+  }
+  
+  .top-bar-left a, .top-bar-right a{
+    display: none;
+  }
+
+  .top-bar-center img {
+    max-width: 60%;
+  }
+
+  .top-news-bar-kike .highlight-news {
+    font-size: 12px;
+  }
+
+  .top-news-bar-kike .news-list li a {
+    font-size: 12px; 
+  }
+  
+}
+
+.top-bar-right .btn {
+  font-size: 14px;
+}
+
+/* Barra inferior con íconos */
+.bottom-bar {
+  background-color: #f1f1f1;
+  padding: 10px 0;
+}
+
+.bottom-bar .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bottom-bar .team-icons img {
+  margin-right: 15px;
+}
+
+.bottom-bar .team-icons img:last-child {
+  margin-right: 0;
+}
+
+@media (max-width: 576px) {
+  .bottom-bar .team-icons {
+    margin-left:30px;
+    margin-right: auto;
+  }
+}
+
+/* Estilos para la barra de noticias superior */
+.top-news-bar-kike {
+  background-color: #f4f4f4;
+  padding: 5px 10px;
+  font-size: 15px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #ddd; 
+  width: 100%;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+}
+
+.top-news-bar-kike .highlight-news {
+  font-weight: bold;
+  margin-right: 10px; 
+  white-space: nowrap;
+}
+
+.top-news-bar-kike .news-list {
+  list-style: none;
+  display: flex;
+  gap: 10px; 
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.top-news-bar-kike .news-list li a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s;
+  font-size: 14px;
+}
+
+.top-news-bar-kike .news-list li a:hover {
+  color: red; 
+}
+
+
+/* Estilos para los botones */
+.d-flex {
+  gap: 10px;
+  margin-right: -30px;
+}
+
+.btn-group {
+  position: relative;
+}
+
+.btn-group .btn {
+  border-radius: 0;
+  padding: 5px 10px;
+  font-size: 16px;
+}
+
+.btn-group .dropdown-toggle {
+  display: flex;
+  align-items: center;
+}
+
+.btn-group .dropdown-toggle img {
+  margin-right: 5px;
+}
+
+.btn-group .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: auto;
+}
+
+.btn-group .dropdown-menu {
+  width: auto;
+  max-width: 250px;
+  white-space: normal; 
+}
+
+.btn-group .dropdown-header {
+  font-weight: bold;
+  font-size: 12px;
+  padding: 5px 10px;
+  white-space: normal;
+  text-align: left;
+  color:#333;
+}
+
+.btn-group .dropdown-item img {
+  width: 15px;
+  height: 10px;
+  margin-right: 5px;
+}
+
+.btn-group .dropdown-menu .form-check-label {
+  padding: 2px 0;
+  font-size: 14px;
+}
+
+.btn-group .dropdown-menu .btn-confirmar {
+  background-color: #D32F2F;
+  color: white;
+  border-radius: 8px;
+  width: auto;
+}
+
+.btn-suscribete, .btn-iniciar {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+}
+
+.btn-suscribete:hover, .btn-iniciar:hover {
+  background-color: #c82333;
+}
+
+.btn-group .dropdown-menu .btn-confirmar:hover {
+  background-color: #B71C1C;
+}
+
+.btn-group .btn-light {
+  padding: 10px 10px;
+  font-size: 16px;
+  border-color: #ddd;
+}
+
+.btn-group .btn-light{
+  border-radius: 8px;
+}
+
+.btn-danger {
+  background-color: #ffffff;
+  border-color: #ddd;
+  color: red;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.btn-danger:hover {
+  background-color: black;
+  border-color: #ddd;
+}
+
+.form-check {
+  margin-bottom: 8px; 
+}
+
+.btn-group .dropdown-item {
+    font-size: 12px;
+    padding: 5px 10px;
+    line-height: 1.2;
+  }
+
+  .btn-group .dropdown-divider .dropdown-header {
+    font-size: 12px;
+    padding: 5px 10px;
+    line-height: 1.2;
+  }
+
+@media (max-width: 992px) {
+    .btn-group .dropdown-menu {
+      display: none;
+    }
+}
+
+@media (max-width: 768px) {
+  .btn-group .dropdown-toggle {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+
+  .btn-group .dropdown-menu {
+      display: none;
+    }
+
+  .btn-group .dropdown-item {
+    font-size: 12px;
+    padding: 5px 10px;
+    line-height: 1.2;
+  }
+
+  .btn-group .dropdown-menu .btn-confirmar {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .btn-group .dropdown-menu {
+      display: none;
+    }
+}
+
+.card-img-top {
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.card-text {
+    color: gray;
+}
+
+@media (max-width: 768px) {
+    .card-img-top {
+        max-height: 200px; /* Reducción de tamaño de imagen en pantallas más pequeñas */
+    }
+}
+
+.anuncio-carlsjr {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.col-lg-6,
+.col-lg-3 {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.card-kike {
+    margin-left: 0;
+}
+
+@media (min-width: 1200px) {
+    .container-noticias {
+        margin-right: 0;
+        margin-left: 10px;
+    }
+
+    .anuncio {
+        margin-bottom: 0;
+        padding-right: 0;
+    }
+
+    .card-kike {
+        margin-left: 50px;
+    }
+
+    .col-xl-6,
+    .col-xl-3 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+
+@media (max-width: 1199.98px) {
+    .anuncio {
+        display: none;
+    }
+
+    .card-kike {
+        margin-left: 50px;
+    }
+}
+
+.no-wrap {
+    white-space: nowrap;
+  }
+        </style>
+
+        <title>Marca</title>
+
+    </head>
+
+    <body>
+        <!-- Parte 1-->
+        <!-- <div class="top-news-bar top-new-bar-kike">
+        <span class="highlight-news">Es noticia:</span>
+        <ul class="news-list">
+          <li><a href="#">México-Canadá EN VIVO   /</a></li>
+          <li><a href="#">Paraguay-Brasil EN VIVO   /</a></li>
+          <li><a href="#">USA-Nueva Zelanda   /</a></li>
+          <li><a href="#">Partidos hoy    /</a></li>
+          <li><a href="#">GP Azerbaiyán 2024    /</a></li>
+          <li><a href="#">Beca Telmex</a></li>
+        </ul>
+      </div> -->
+      <div class="top-bar">
+        <div class="container">
+          <div class="top-bar-left">
+            <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/RadioMARCA.svg/800px-RadioMARCA.svg.png" alt="Radio MARCA" width="40"><strong>Radio MARCA</strong></a>
+            <a class="top-bar-left-cuidate" href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9BxtV_eYZNr-LsVjw6xWLSdSjgY1BPtllrA&s" alt="CuídatePlus" width="40"> <strong>CuídatePlus</strong></a>
+            <a href="#"><img src="https://thumbs.dreamstime.com/b/ejemplo-del-vector-icono-de-la-muestra-hashtag-en-fondo-rojo-131450741.jpg" alt="Lo + trending" width="40">
+            <strong>Lo + trending</strong></a>
+          </div>
+          <div class="top-bar-center">
+            <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Marca.svg/2560px-Marca.svg.png" alt="Marca" width="180"></a>
+          </div>
+        <div class="d-flex align-items-center ml-auto">
+          <div class="btn-group">
+            <!-- Botón desplegable con la bandera y texto -->
+            <button type="button" class="btn btn-light dropdown-toggle d-none d-lg-block" data-toggle="dropdown" aria-expanded="false">
+              <img src="https://img.freepik.com/vector-gratis/ilustracion-bandera-mexico_53876-18169.jpg?size=626&ext=jpg&ga=GA1.1.1413502914.1725926400&semt=ais_hybrid" alt="MX" width="20" height="15">
+              MX
+            </button>
+          
+            <!-- Menú desplegable de ediciones -->
+            <ul class="dropdown-menu">
+              <h6 class="dropdown-header">EDICIONES:</h6>
+              <li><a class="dropdown-item" href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Bandera_nacional_de_Espa%C3%B1a.png" width="20" height="15"> ES (España)</a></li>
+              <li><a class="dropdown-item" href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Flag_of_the_United_Kingdom_%283-5%29.svg/1280px-Flag_of_the_United_Kingdom_%283-5%29.svg.png" width="20" height="15"> EN (English)</a></li>
+              <li><a class="dropdown-item active" href="#"><img src="https://img.freepik.com/vector-gratis/ilustracion-bandera-mexico_53876-18169.jpg?size=626&ext=jpg&ga=GA1.1.1413502914.1725926400&semt=ais_hybrid" width="20" height="15"> MX (México)</a></li>
+              <li><a class="dropdown-item" href="#"><img src="https://img.freepik.com/vector-premium/ilustracion-bandera-estados-unidos_768467-331.jpg" width="20" height="15"> US (USA)</a></li>
+          
+              <div class="dropdown-divider"></div>
+              <h6 class="dropdown-header">Escoge tu edición de Marca.com favorita</h6>
+              <form class="px-3">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="edition" id="edition-es" value="es">
+                  <label class="form-check-label" for="edition-es">
+                    ES (España)
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="edition" id="edition-en" value="en">
+                  <label class="form-check-label" for="edition-en">
+                    EN (English)
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="edition" id="edition-mx" value="mx" checked>
+                  <label class="form-check-label" for="edition-mx">
+                    MX (México)
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="edition" id="edition-us" value="us">
+                  <label class="form-check-label" for="edition-us">
+                    US (USA)
+                  </label>
+                </div>
+                <button type="submit" class="btn btn-confirmar mt-2">Confirmar</button>
+              </form>
+            </ul>
+          </div>
+    
+          <button class="btn btn-danger btn-suscribete d-none d-lg-block">Suscríbete</button>
+          <button type="button" class="btn btn-danger btn-iniciar d-none d-lg-block">Iniciar sesión</button>
+        </div>
+          
+          
+        </div>
+      </div>
+     <!-- NAVBAR -->
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: rgba(190, 0, 0, 0.863);">
+            <a class="navbar-brand" href="#"><img src="https://i.pinimg.com/originals/a0/83/f0/a083f072d006f15b1fd1f35505ec85c7.png" alt="logo" width="90" height="60"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mx-auto">
+                <li class="nav-item dropdown active">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                  Fútbol
+                  </a>
+                  <div class="dropdown-menu p-3 bg-dark"  aria-labelledby="navbarDropdownMenuLink">
+                    <div class="row">
+                      <div class="col-md-4 col-lg-4 col-sm-12">
+                      <h2 class="dropdown-header">México</h2>
+                      <a class="dropdown-item" href="#">Liga MX</a>
+                        <small class="small mx-4" href="#">Calendario - Apertura</small><br>
+                        <small class="small mx-4" href="#">Posiciones - Apertura</small><br>
+                        <small class="small mx-4" href="#">Calendario - Clausura</small><br>
+                        <small class="small mx-4" href="#">Posiciones - Resultados</small>
+                      <a class="dropdown-item" href="#">Liga MX Femenil</a>
+                      <a class="dropdown-item" href="#">Liga de Expansión MX</a>
+                      <small class="small mx-4" href="#">Calendario - Apertura</small><br>
+                      <small class="small mx-4" href="#">Posiciones - Apertura</small><br>
+                      <small class="small mx-4" href="#">Calendario - Clausura</small><br>
+                      <small class="small mx-4" href="#">Posiciones - Resultados</small>
+                      <a class="dropdown-item" href="#">Mexicanos por el mundo</a>
+                    </div>
+                    <div class="col-md-4 col-lg-4 col-sm-12">
+                      <h6 class="dropdown-header">América</h6>
+                      <a class="dropdown-item" href="#">Copa América</a>
+                      <small class="small mx-4" href="#">Calendario - Apertura</small><br>
+                      <small class="small mx-4" href="#">Posiciones - Apertura</small><br>
+                      <small class="small mx-4" href="#">Calendario - Clausura</small><br>
+                      <small class="small mx-4" href="#">Posiciones - Resultados</small>
+                      <a class="dropdown-item" href="#">MLS</a>
+                      <a class="dropdown-item" href="#">Argentina</a>
+                      <a class="dropdown-item" href="#">Concachampions</a>
+                    </div>
+                    <div class="col-md-4 col-lg-4 col-sm-12">
+                      <h6 class="dropdown-header">Europa</h6>
+                      <a class="dropdown-item" href="#">LaLiga</a>
+                      <a class="dropdown-item" href="#">Premier League</a>
+                      <a class="dropdown-item" href="#">Ligue 1</a>
+                      <a class="dropdown-item" href="#">Serie A</a>
+                    </div>
+                    <div class="col-md-6 col-lg-4 col-sm-12">
+                      <h6 class="dropdown-header">Y además</h6>
+                      <a class="dropdown-item" href="#">Balón de Oro</a>
+                      <a class="dropdown-item" href="#">Copa Oro</a>
+                      <a class="dropdown-item" href="#">Mundial de Clubes</a>
+                      <a class="dropdown-item" href="#">Mundial</a>
+                    </div>
+                  </div>
+                </div>
+                </li>
+                <li class="nav-item dropdown active">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                    Baloncesto
+                  </a>
+                  <div class="dropdown-menu p-3 bg-dark" style="width: 100%;" aria-labelledby="navbarDropdownMenuLink">
+                    <div class="row">
+                      <div class="col-md-4 col-lg-4 col-sm-12">
+                      <h2 class="dropdown-header">Worldwide</h2>
+                      <a class="dropdown-item" href="#">NBA</a>
+                        <small class="small mx-4" href="#">Temporada regular</small><br>
+                        <small class="small mx-4" href="#">Playoffs</small><br>
+                        <small class="small mx-4" href="#">Finales NBA</small><br>
+                      <a class="dropdown-item" href="#">Euroleage</a>
+                      <small class="small mx-4" href="#">Temporada regular</small><br>
+                        <small class="small mx-4" href="#">Playoffs</small><br>
+                        <small class="small mx-4" href="#">Final Four</small><br>
+                    </div>
+                    <div class="col-md-4 col-lg-4 col-sm-12">
+                      <h6 class="dropdown-header">México</h6>
+                      <a class="dropdown-item" href="#">LNBP</a>
+                      <small class="small mx-4" href="#">Calendario - Apertura</small><br>
+                      <small class="small mx-4" href="#">Posiciones - Apertura</small><br>
+                      <small class="small mx-4" href="#">Calendario - Clausura</small><br>
+                      <small class="small mx-4" href="#">Posiciones - Resultados</small>
+                      <a class="dropdown-item" href="#">CIBACOPA</a>
+                      <a class="dropdown-item" href="#">LNBP Femenil</a>
+                      <a class="dropdown-item" href="#"></a>
+                    </div>
+                    <div class="col-md-4 col-lg-4 col-sm-12">
+    
+                    </div>
+                  </div>
+                </div>
+                </li>
+                <li class="nav-item dropdown active">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                    Motor
+                  </a>
+                  <div class="dropdown-menu p-3 bg-dark" style="width: 100%;" aria-labelledby="navbarDropdownMenuLink">
+                    <div class="row">
+                      <div class="col-md-4 col-lg-4 col-sm-12">
+                      <h2 class="dropdown-header">Motor</h2>
+                      <a class="dropdown-item" href="#">F1</a>
+                      <small class="small mx-4" href="#">Calendario</small><br>
+                      <small class="small mx-4" href="#">Clasificación</small><br>
+                      <small class="small mx-4" href="#">Constructores</small><br>
+                      <a class="dropdown-item" href="#">Motociclismo</a>
+                    </div>
+                    <div class="col-md-4 col-lg-4 col-sm-12">
+    
+                    </div>
+                  </div>
+                </div>
+                </li>
+                <li class="nav-item dropdown active">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                    Polideportivo
+                  </a>
+                  <div class="dropdown-menu p-3 bg-dark" style="width: 100%;" aria-labelledby="navbarDropdownMenuLink">
+                    <div class="row">
+                      <div class="col-md-4 col-lg-4 col-sm-12">
+                      <a class="dropdown-item" href="#">Voleibol</a>
+                        <small class="small mx-4 no-wrap" href="#">Liga de Naciones de Voleibol</small><br>
+                        <small class="small mx-4 no-wrap" href="#">Superliga de Voleibol</small><br>
+                        <small class="small mx-4 no-wrap" href="#">Campeonatos Europeos de Voleibol</small><br>
+                        <small class="small mx-4 no-wrap" href="#">Liga Mexicana de Voleibol</small><br>
+                      <a class="dropdown-item" href="#">Handball</a>
+                        <small class="small mx-4 no-wrap" href="#">Liga ASOBAL</small><br>
+                        <small class="small mx-4 no-wrap" href="#">Bundesliga de Balonmano</small><br>
+                        <small class="small mx-4 no-wrap" href="#">Campeonatos Internacionales</small><br>
+                        <small class="small mx-4 no-wrap" href="#">Campeonatos Internacionales</small><br>
+                        <small class="small mx-4 no-wrap" href="#">Liga Nacional de Balonmano</small><br>
+                      <a class="dropdown-item" href="#">Waterpolo</a>
+                        <small class="small mx-4 no-wrap" href="#">Liga Mundial de Waterpolo</small><br>
+                        <small class="small mx-4 no-wrap" href="#">Ligas Nacionales (España, Italia, Serbia)</small><br>
+                        <small class="small mx-4 no-wrap" href="#">Torneos Nacionales de Waterpolo</small><br>
+                    </div>
+                    <div class="col-md-4 col-lg-4 col-sm-12">
+    
+                    </div>
+                  </div>
+                </div>
+                </li>
+                <li class="nav-item dropdown active">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                    Más
+                  </a>
+                  <div class="dropdown-menu p-3 bg-dark" style="width: 100%;" aria-labelledby="navbarDropdownMenuLink">
+                    <div class="row">
+                      <div class="col-md-4 col-lg-4 col-sm-12">
+                      <a class="dropdown-item" href="#">Béisbol</a>
+                        <small class="small mx-4" href="#">Calendario / Posiciones</small><br>
+                      <a class="dropdown-item" href="#">Tenis</a>
+                      <small class="small mx-4" href="#">Abierto Mexicano</small><br>
+                      <a class="dropdown-item" href="#">Lucha Libre</a>
+                      <a class="dropdown-item" href="#">UFC</a>
+                      <a class="dropdown-item" href="#">Juegos Paralímpicos</a>
+                      <a class="dropdown-item" href="#">Juegos Olímpicos</a>
+                    </div>
+                    <div class="col-md-4 col-lg-4 col-sm-12">
+    
+                    </div>
+                  </div>
+                </div>
+                </li>
+              </ul>
+              <form class="form-inline my-2 my-lg-0">
+                <div class="input-group">
+                  <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                  <div class="input-group-append">
+                    <button class="btn btn-light" type="button">
+                      <i class="bi bi-search"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                      </svg></i>
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </nav>
+    
+          <div class="bottom-bar">
+            <div class="container">
+              <div class="team-icons">
+                <a class="mx-2 pr-2" href="#"><img src="https://paladarnegro.net/escudoteca/mexico/ligamx/png/atlas.png" alt="" width="30"></a>
+                <a class="mx-2 pr-2" href="#"><img src="https://w1.pngwing.com/pngs/1019/569/png-transparent-champions-league-logo-liga-mx-mexico-city-cruz-azul-football-concacaf-champions-league-club-puebla-decal.png" alt="" width="30"></a>
+                <a class="mx-2 pr-2" href="#"><img src="https://paladarnegro.net/escudoteca/mexico/ligamx/png/guadalajara.png" alt="" width="30"></a>
+                <a class="mx-2 pr-2" href="#"><img src="https://escudosfc.com.br/images/monterrey.png" alt="" width="30"></a>
+                <a class="mx-2 pr-2" href="#"><img src="https://e7.pngegg.com/pngimages/302/14/png-clipart-club-universidad-nacional-liga-mx-mexico-club-america-cougar-football-blue-logo.png" alt="" width="30"></a>
+                <a class="mx-2 pr-2" href="#"><img src="https://escudosfc.com.br/images/san_luis_mex.png" alt="" width="30"></a>
+                <a class="mx-2 pr-2" href="#"><img src="https://paladarnegro.net/escudoteca/mexico/ligamx/png/necaxa.png" alt="" width="30"></a>
+                <a class="mx-2 pr-2" href="#"><img src="https://escudosfc.com.br/images/pachuca.png" alt="" width="30"></a>
+                <a class="mx-2 pr-2" href="#"><img src="https://escudosfc.com.br/images/tihuana_mex.png" alt="" width="30"></a>
+                <a class="mx-2 pr-2" href="#"><img src="https://escudosfc.com.br/images/cruzazul.png" alt="" width="30"></a>
+                <a class="mx-2 pr-2" href="#"><img src="https://escudosfc.com.br/images/leon_mex.png" alt="" width="30"></a>
+                <a class="mx-2 pr-2" href="#"><img src="" alt="" width="30"></a>
+              </div>
+            </div>
+          </div>
+    
+          <div class="container mt-4">
+            <div class="row row-kike">
+                <div class="col-12 d-flex justify-content-center">
+                    <div class="anuncio">
+                        <a href="https://promo.codere.mx/deportes/general/futbol/rayados?&ctype=728x90&utm_source=7382&utm_medium=21802&utm_campaign=22921&utm_content=sb;">
+                            <img src="https://s2.adform.net/Banners/65498971/65498971.gif?bv=2" alt="Anuncio de Caliente.mx" class="img-fluid">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="container container-noticias mt-4">
+          <div class="row row-kike">
+    
+              <div class="col-lg-3 col-12 mb-0 d-none d-xl-block pr-0">
+                  <div class="anuncio.carlsjr">
+                      <a href="https://carlsjr.com.mx/events/ricks-burger?utm_source=MAX&utm_medium=Video&utm_campaign=RicksBurger;">
+                          <img src="https://tpc.googlesyndication.com/simgad/874712510341696701" alt="Anuncio de Carls Jr." class="img-fluid">
+                      </a>
+                  </div>
+              </div>
+      
+    
+              <div class="col-lg-6 col-12 mb-4 pl-0">
+                  <div class="card card-kike">
+                      <img class="card-img-top" src="https://phantom-marca-mx.unidadeditorial.es/80945f132f550479082638e6048d0758/resize/1320/f/webp/mx/assets/multimedia/imagenes/2024/09/11/17260736681496.jpg" alt="Noticia destacada">
+                      <div class="card-body">
+                          <h5 class="card-title">¿Se viene el Checo 2.0 en F1? RB ficha a joven mexicano</h5>
+                      </div>
+                  </div>
+              </div>
+    
+              <div class="col-lg-3 col-12">
+    
+                  <div class="card card-kike mb-4">
+                      <img class="card-img-top" src="https://cnnespanol.cnn.com/wp-content/uploads/2024/09/Mundial-1-e1726050110227.jpg?quality=100&strip=info&w=300&h=170&crop=1" alt="Noticia lateral 1">
+                      <div class="card-body">
+                          <h6 class="card-title">"Brasil y Argentina pierden sus partidos de clasificación para el mundial"</h6>
+                      </div>
+                  </div>
+    
+                  <div class="card card-kike mb-4">
+                      <img class="card-img-top" src="https://cnnespanol.cnn.com/wp-content/uploads/2024/09/medallas-olimpicos.webp?w=300&h=170&crop=1" alt="Noticia lateral 2">
+                      <div class="card-body">
+                          <h6 class="card-title">Roban cuatro medallas olímpicas del coche de un remero australiano</h6>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+        <!-- Parte 2 -->
+
+        <!--INICIO DEL CODIGO A INSERTAR
+    Tarjetas parte superior-->
+    <div class="container-fluid">
+      <div class="row">
+          <!-- Primera tarjeta -->
+          <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
+              <div class="card mx-auto" style="border: none;">
+                  <img src="f.o.png" class="card-img-top" alt="...">
+                  <div class="card-body d-flex flex-column">
+                      <p class="card-text mt-2" style="font-weight: 500; font-size: 25px;">Felix Orode, el jugador nigeriano que explica el festejo de Dele Alli</p>
+                      <hr class="mt-auto" style="border-top: 2px solid grey; width: 100%;">
+                  </div>
+              </div>
+          </div>
+  
+          <!-- Segunda tarjeta -->
+          <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
+              <div class="card mx-auto" style="border: none;">
+                  <img src="C.R.7.png" class="card-img-top" alt="...">
+                  <div class="card-body d-flex flex-column">
+                      <p class="card-text mt-2" style="font-weight: 500; font-size: 28px;">Cristiano habla sobre Cuadrado y la cesión del número 7</p>
+                      <div style="font-size: 14px; font-weight: bold; color: gray;">REDACCIÓN MARCA CLARO</div>
+                      <hr class="mt-auto" style="border-top: 2px solid grey; width: 100%;">
+                  </div>
+              </div>
+          </div>
+  
+          <!-- Tercera tarjeta -->
+          <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
+              <div class="card mx-auto" style="border: none;">
+                  <img src="C.A.png" class="card-img-top" alt="...">
+                  <div class="card-body d-flex flex-column">
+                      <p class="card-text mt-2" style="font-weight: 500; font-size: 25px;">La joya celeste que hace soñar a Cruz Azul</p>
+                      <div style="font-size: 14px; font-weight: bold; color: gray;">JAVIER CARDOSO</div>
+                      <hr class="mt-auto" style="border-top: 2px solid grey; width: 100%;">
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+      
+    <div class="container-fluid">
+      <hr style="border-top: 1px solid lightgray; margin: 0;">
+      <div class="d-flex justify-content-center align-items-center" style="padding: 5px 0;">
+          <strong style="margin-right: 10px;">Es noticia:</strong>
+          <div class="d-flex flex-wrap justify-content-center">
+              <span class="link" style="margin-right: 15px;">Mercado de fichajes</span>
+              <span class="link" style="margin-right: 15px;">Rodrigo</span>
+              <span class="link" style="margin-right: 15px;">Fernando Alonso</span>
+              <span class="link" style="margin-right: 15px;">Lewandowski</span>
+              <span class="link" style="margin-right: 15px;">Usain Bolt</span>
+              <span class="link" style="margin-right: 15px;">Donald Trump</span>
+              <span class="link">Calendario Liga</span>
+          </div>
+      </div>
+      <hr style="border-top: 1px solid lightgray; margin: 0;">
+  </div>
+  
+  <div class="container-fluid my-5">
+    <div class="row">
+      <div class="card mb-3 mx-auto mx-2" style="max-width: 500px; border: none;">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src="S.1.jpeg" alt="..." style="width: 180px;">
+          </div>
+          <div class="col-md-8 mx-auto">
+            <div class="card-body">
+              <h5 class="card-title" style="color: blue;">LALIGA SANTANDER</h5>
+              <p class="card-text" style="font-weight: 500; font-size: 25px;">¿Que equipos y que jugadores estuvieran en la reunion de la AFE.?</p>
+              <p class="card-text"><small class="text-muted" style="font-size: 15px;">💬14</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card mb-3 mx-auto mx-2" style="max-width: 500px; border: none;">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src="B.1.webp" alt="..." style="width: 180px">
+          </div>
+          <div class="col-md-8 mx-auto">
+            <div class="card-body">
+              <h5 class="card-title" style="color: blue;">FC BARCELONA</h5>
+              <p class="card-text" style="font-weight: 500; font-size: 25px;">El barca se rompe por el centro Nueva lesión en la medular azulgrana</p>
+              <p class="card-text"><small class="text-muted" style="font-size: 15px;">💬35</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card mb-3 mx-auto" style="max-width: 500px;">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src="r.v.webp" alt="..." style="width: 180px;">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title" style="color: blue;">RAYO VALLECANO</h5>
+              <p class="card-text" style="font-weight: 500; font-size: 25px;">Michael: "El partido contra el rayo es el que menos disfruto"</p>
+              <p class="card-text"><small class="text-muted" style="font-size: 15px;">💬12</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+  </div>
+
+  <div class="container-fluid">
+  <div class="row">
+    <!-- Primera tarjeta -->
+    <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
+      <div class="card mx-auto" style="border: none;">
+        <img src="RodrigueAguurre.png" class="card-img-top" alt="...">
+        <div class="card-body d-flex flex-column">
+          <p class="card-text mt-2" style="font-weight: 500; font-size: 25px;">Rodrigo Aguirre nuevo jugador del America</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Segunda tarjeta -->
+    <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
+      <div class="card mx-auto" style="border: none;">
+        <img src="mba.jpeg" class="card-img-top" alt="...">
+        <div class="card-body d-flex flex-column">
+          <p class="card-text mt-2" style="font-weight: 500; font-size: 28px;">En Francia dudan de Mbappé... "Ya no da miedo como antes"</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tercera tarjeta -->
+    <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
+      <div class="card mx-auto" style="border: none;">
+        <img src="jj.jpeg" class="card-img-top" alt="...">
+        <div class="card-body d-flex flex-column">
+          <p class="card-text mt-2" style="font-weight: 500; font-size: 25px;">Vasco Aguirre estira puya a seleccionados.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+    
+        <!-- Parte 3 -->
+
+        <!-- Grid de otras webs -->
+        <div class="container-fluid text-white " style="background-color: black; align-items: center;">
+            
+            <!-- Contenido con columnas -->
+            <div class="container-fluid px-5">
+
+                <div>
+                    <p class="font-weight-bold mb-2 pt-3 text-center">Otras webs de Unidad Editorial</p>
+                    <hr class="mb-4 mt-2 border-white">
+                </div>
+                
+                <div class="row mb-3 pb-2">
+
+                    <div class="col-12 col-sm-6 col-md-3 text-left mb-4">
+                        <p class="font-weight-bold mb-3">Marca</p>
+                        <a href="" class="ref d-block mb-0">App Marca</a>
+                        <a href="" class="ref d-block my-0">Apuestas Deportivas</a>
+                        <a href="" class="ref d-block my-0">Clasificación LaLiga</a>
+                        <a href="" class="ref d-block my-0">Calendario LaLiga</a>
+                        <a href="" class="ref d-block my-0">Hemeroteca Marca</a>
+                        <a href="" class="ref d-block my-0">Marca eSports</a>
+                        <a href="" class="ref d-block my-0">Marca Madrid</a>
+                        <a href="" class="ref d-block my-0">Marca en Orbyt</a>
+                        <a href="" class="ref d-block">Zona Marca</a>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-3 text-left mb-4">
+                        <p class="font-weight-bold mb-3">Ocio y Moda</p>
+                        <a href="" class="ref d-block mb-0">Tiramillas</a>
+                        <a href="" class="ref d-block my-0">Moda-Telva</a>
+                        <a href="" class="ref d-block my-0">BUHO Magazine</a>
+                        <a href="" class="ref d-block my-0">Traductor</a>
+                        <a href="" class="ref d-block my-0">Programación TV</a>
+                        <a href="" class="ref d-block my-0">Marca Entradas</a>
+                        <a href="" class="ref d-block">Mi bebé y yo</a>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-3 text-left mb-4">
+                        <p class="font-weight-bold mb-3">Unidad Editorial</p>
+                        <a href="" class="ref d-block mb-0">El Mundo</a>
+                        <a href="" class="ref d-block my-0">Expansión</a>
+                        <a href="" class="ref d-block my-0">CuidatePlus</a>
+                        <a href="" class="ref d-block my-0">Diario Médico</a>
+                        <a href="" class="ref d-block my-0">Correo Farmacéutico</a>
+                        <a href="" class="ref d-block my-0">Suscripción Marca</a>
+                        <a href="" class="ref d-block">Suscripción El Mundo</a>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-3 text-left mb-4">
+                        <p class="font-weight-bold mb-3">Formación y Empleo</p>
+                        <a href="" class="ref d-block mb-0">Escuela Unidad Editorial</a>
+                        <a href="" class="ref d-block my-0">Unidad Editorial</a>
+                        <a href="" class="ref d-block">Expansión y Empleo</a>
+                    </div>
+
+                </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Footer -->
+        <footer class="bg-white text-black mx-auto text-center">
+            <p class="my-0">
+               <strong>© Agosto 2018 Unidad Editorial Información Deportiva, S.L.U. Todos los derechos reservados.</strong>
+            </p>
+            <p class="my-0">
+                <a href="" class="ref2 pr-2">Términos y condiciones de uso</a>
+                <a href="" class="ref2 px-2">Política de privacidad</a>
+                <a href="" class="ref2 px-2">Política de cookies</a>
+                <a href="" class="ref2 px-2">Certificado por OJD</a>
+                <a href="" class="ref2 px-2">Contacto</a>
+                <a href="" class="ref2 px-2">Publicidad</a>
+                <a href="" class="ref2 px-2">Ayuda</a>
+                <a href="" class="ref2 pl-2">Nuestro equipo</a>
+            </p>
+            <a href="" class="ref2">Venta de contenidos</a>
+
+            <p class="mt-4 mb-0 bold-sm">Siguenos en</p>
+            <!-- iconos de redes sociales -->
+            <p style="align-items: center;">
+                <a href="" class="icon mx-1"><i class="fab fa-facebook-f"></i></a>
+                <a href="" class="icon mx-1"><i class="fab fa-instagram"></i></a>
+                <a href="" class="icon mx-1"><i class="fab fa-twitter"></i></a>
+                <a href="" class="icon mx-1"><i class="fab fa-google"></i>></a>
+            </p>
+        </footer>
+
+        <!-- Optional JavaScript; choose one of the two! -->
+
+        <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+        <!-- Option 2: Separate Popper and Bootstrap JS -->
+        <!--
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+        -->
+    </body>
+</html>
